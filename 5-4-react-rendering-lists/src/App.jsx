@@ -144,7 +144,17 @@ export default function App() {
         - course={course}
         - index={idx}
         - onMutateCourse={mutateCourseByIndex}
-  */}
+  */
+  <section className="grid">
+  {courses.map((course, idx) => (
+    <CourseCard
+      key={course.id}
+      course={course}
+      index={idx}
+      onMutateCourse={mutateCourseByIndex}
+    />
+  ))}
+</section>}
       </section>
     </main>
   );
